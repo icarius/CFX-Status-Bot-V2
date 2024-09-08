@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  cfx_status_botv2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: "host"
+    image: 'localhost/cfx_status_botv2'
+    container_name: 'cfx_status_bot'
+    restart: unless-stopped
+    volumes:
+      - ${PWD}/config.json:/app/config.json
