@@ -1,5 +1,4 @@
-FROM python:3.6.1-alpine
-RUN apk update
+FROM python:3.12-alpine3.19
 RUN mkdir /app
 WORKDIR /app
 COPY ./requirements.txt .
